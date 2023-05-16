@@ -10,10 +10,10 @@
 
 <body>
 
-    <h1 style="align-items: center;">회원가입 양식</h1>
+    <h1>회원가입 양식</h1>
 
     <form action="" style="width: 400px; margin: 0 auto;">
-        <fieldset style="align-items: center;">
+        <fieldset>
             <legend> 회원가입 </legend>
             <label for="user-name">
                 이메일
@@ -51,9 +51,15 @@
             </select>
             <br/>
 
-            <textarea cols="20" rows="5">
-                자기소개
+            <br/>
+            <textarea cols="20" rows="3">
+            자기소개
             </textarea>
+            <br/>
+
+            <label for="agree">가입동의</label>
+            <input type="checkbox" id="agree">
+            <br/>
 
             <input type="button" value="확인">
         </fieldset>
