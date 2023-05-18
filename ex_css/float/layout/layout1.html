@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>layout01</title>
+    <style>
+        /* 여백 초기화 */
+        body, div, ul, li, dl, dt, ol, h1, h2, h3, h4, h5, h6, input, fieldset, legend, p, select, table, th, td, tr, textarea, button, form {margin: 0; padding: 0;}
+        body {
+            background-color: #CCFFCC;
+            height: 500px;
+        }
+        #wrap {
+            width : 500px;
+            height: 600px;
+            margin: 0 auto;
+        }
+        #header {
+            background-color: rgb(13, 63, 13);
+            height : 50px;
+            text-align: center;
+            color: white;
+            line-height: 50px;
+            text-transform: uppercase;
+        }
+        #nav {
+            background-color: darkgreen;
+            height : 50px;
+            text-align: center;
+            color: white;
+            line-height: 50px;
+            text-transform: uppercase;
+        }
+        #side {
+            background-color: darkgreen;
+            height : 300px;
+            width: 20%;
+            text-align: center;
+            float: left;
+            color: white;
+            line-height: 300px;
+            text-transform: uppercase;
+        }
+        #contents {
+            background-color: rgb(94, 126, 46);
+            height : 300px;
+            width: 80%;
+            text-align: center;
+            float: right;
+            color: white;
+            margin: 0 auto;
+            line-height: 300px;
+            text-transform: uppercase;
+        }
+        #footer {
+            background-color: rgb(78, 255, 108);
+            height: 30px;
+            width: 100%;
+            text-align: center;
+            float: right;
+            color: white;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">header</div>
+        <div id="nav">nav</div>
+        <div id="side">side</div>
+        <div id="contents">contents</div>
+        <div id="footer">footer</div>
+    </div>
+</body>
+</html>
