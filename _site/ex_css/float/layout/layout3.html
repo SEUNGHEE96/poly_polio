@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>layout03</title>
+    <style>
+         /* 여백 초기화 */
+        body, div, ul, li, dl, dt, ol, h1, h2, h3, h4, h5, h6, input, fieldset, legend, p, select, table, th, td, tr, textarea, button, form {margin: 0; padding: 0;}
+        body {
+            background-color: white;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #wrap {
+            width: 60%;
+            max-width: 1200px;
+            color: white;
+            display: flex;
+        }
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .side-contents {
+            display: flex;
+        }
+        .side {
+            width: 25%;
+            background-color:rgb(85, 255, 85);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: xx-large;
+        }
+        .header,
+        .contents,
+        .footer {
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size:xx-large;
+        }
+        .header {
+            background-color: rgb(10, 70, 2);
+        }
+        .contents {
+            background-color: rgb(0, 121, 20);
+            flex-grow: 1;
+            min-height: 600px;
+        }
+        .footer {
+            background-color:rgba(8, 78, 43, 0.356);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="side">side</div>
+        <div class="main-content">
+            <div class="header">header</div>
+            <div class="side-contents">
+                <div class="contents">contents
+                </div>
+                
+            </div>
+            <div class="footer">footer</div>
+        </div>
+    </div>
+</body>
+
+</html>
