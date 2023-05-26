@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let okButton = document.querySelector('#submit')
+            okButton.addEventListener('click', function () {
+                alert("확인버튼 클릭");
+
+                let username = document.querySelector('#username');
+                console.log(username.value);
+                if(passwd.value = "123456") {
+                    alert("패스워드가 너무 단순합니다.");
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <input type="text" name="username">
+    <input type="password" name="passwd">
+    <button id="submit">확인</button>
+</body>
+</html>
