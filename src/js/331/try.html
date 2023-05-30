@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="result"></div>
+    <script>
+        let page = 0;
+        let romances; // romances 변수를 전역 범위로 이동
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", "romance.json");
+        xhr.send();
+
+        xhr.onreadystatechange = function (event) {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                romances = JSON.parse(xhr.responseText);
+                renderHTML();
+            } else {
+                // 에러가 발생한 경우
+            }
+        };
+
+        function renderHTML() {
+            let htmlString = "";
+            for (let i = page; i < page + 4; i++) {
+                if (i >= romances.length) {
+                    break; // 더 이상 표시할 데이터가 없으면 종료
+                }
+                let content = romances[i];
+                htmlString += `
+                    <h2>${content.id}</h2>
+                    <ul>
+                        <li>전공: ${content.title}</li>
+                        <li>학년: ${content.author}</li>
+                    </ul>
+                    <hr>
+                `;
+            }
+            document.getElementById("result").innerHTML = htmlString;
+            page += 4;
+        };
+    </script>
+    <input type="button" value="증가" onclick="renderHTML();">
+</body>
+
+</html>
