@@ -1,6 +1,8 @@
 const product = ['우유', '식빵'];
 console.log(product);
 
+console.log("얕은 복사");
+
 const goods = product;
 console.log(goods);
 
